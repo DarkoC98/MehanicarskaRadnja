@@ -1,0 +1,38 @@
+﻿<Window x:Class="Projekat.Servis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Servis" Height="555" Width="816.875" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid Margin="0,0,0.4,-0.4">
+            <Rectangle Height="300" VerticalAlignment="Top">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2281D1"/>
+                        <GradientStop Color="#FF34268A" Offset="1"/>
+                        <GradientStop Color="#FF332886" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+            <TextBlock x:Name="tbAdmin" HorizontalAlignment="Left" Margin="34,10,0,0" TextWrapping="Wrap" Text="dada" FontSize="18" Foreground="White" VerticalAlignment="Top"/>
+            <DataGrid Style="{StaticResource MaterialDesignDataGrid}" Background="WhiteSmoke" AutoGenerateColumns="False" x:Name="gridAutomobila" HorizontalAlignment="Left" Height="368" Margin="34,99,0,0" VerticalAlignment="Top" Width="742">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Marka" Width="*" Binding="{Binding Marka}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Model" Width="*" Binding="{Binding Model}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Godiste" Width="*" Binding="{Binding Godiste}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Registracija" Width="*" Binding="{Binding Registracija}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Opis" Width="*" Binding="{Binding Opis}" IsReadOnly="True"  />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Click="Button_Click" Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Content="DODAJ NOVI" Height="53" Margin="330,0,330,10.2"/>
+            <TextBox KeyDown="tbPretraga_KeyDown"  x:Name="tbPretraga" Margin="533,10,34,448" materialDesign:HintAssist.Hint="PRETRAGA" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="16"/>
+        </Grid>
+    </Grid>
+</Window>

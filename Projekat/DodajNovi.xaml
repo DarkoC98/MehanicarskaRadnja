@@ -1,0 +1,30 @@
+﻿<Window x:Class="Projekat.DodajNovi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="DodajNovi" Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="0,0,0.4,-0.4">
+            <Rectangle Height="300" VerticalAlignment="Top">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2281D1"/>
+                        <GradientStop Color="#FF34268A" Offset="1"/>
+                        <GradientStop Color="#FF332886" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBox Foreground="White"  x:Name="tbMarka" Margin="10,29,9.6,384.8" materialDesign:HintAssist.Hint="MARKA" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            <TextBox Foreground="White" x:Name="tbModel" Margin="10,91,6.6,322.8" materialDesign:HintAssist.Hint="MODEL" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            <TextBox Foreground="White" x:Name="tbGodiste" Margin="10,152,7.6,261.8" materialDesign:HintAssist.Hint="GODISTE" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            <TextBox Foreground="White" x:Name="tbRegistracija" Margin="10,214,5.6,200.8" materialDesign:HintAssist.Hint="REGISTRACIJA" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            <RichTextBox x:Name="rtbOpis" BorderBrush="AliceBlue" BorderThickness="9"  Background="WhiteSmoke" HorizontalAlignment="Left" Height="120" Margin="0,300,-0.4,0" materialDesign:HintAssist.Hint="OPIS" Style="{StaticResource MaterialDesignRichTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" VerticalAlignment="Top" Width="344"/>
+            <Button Click="Button_Click" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Content="DODAJ " Height="36" Margin="36,0,207.6,9.8"/>
+            <Button  Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Content="ODUSTANI" Height="36" Margin="204,0,36,9.8"/>
+        </Grid>
+    </Grid>
+</Window>
